@@ -131,7 +131,6 @@ TourGallery.prototype = new Component();
 
 function Services(sSelector){
 	var s = this;
-	
 
 	s.main = function(){
 		s.init(sSelector);
@@ -142,7 +141,7 @@ function Services(sSelector){
 		s.current 			= 0;
 		s.max 					= s.block.length;
 		s.x = 2000;
-
+			
 		s.right.bind('click', s.showNext);
 		s.left.bind('click', s.showPrev);
 		s.link.bind('click', s.showInfo);
@@ -160,50 +159,57 @@ function Services(sSelector){
 		var curObject = s.find('.services__block:eq(' + oCurrent + ')');
 		
 		curObject.animate({opacity: 0}, 300, function(){
-			curObject.removeClass('services__block_active');
+				curObject.removeClass('services__block_active');
 		});
 	}
 
 	s.length = function(oLength){
 		if(oLength >= s.max){
 			s.current = 0;}
-			else if(oLength <0){
-				s.current = s.max -1;}
-			}
-			s.showInfoRight = function(iShift){
-				s.curObject(s.current);
-				s.current+=iShift;
-				s.length(s.current); 
-				s.display((s.find('.services__block:eq(' + s.current + ')')), 'left');
-			}
+		else if(oLength <0){
+			s.current = s.max -1;}
+	}
+	
+	s.showInfoRight = function(iShift){
+		s.curObject(s.current);
+		s.current+=iShift;
+		s.length(s.current); 
+		s.display((s.find('.services__block:eq(' + s.current + ')')), '0', '2000px');
+	}
 
-			s.showInfoLeft = function(iShift){
-				s.curObject(s.current);
-				s.current+=iShift;
-				s.length(s.current); 
+	s.showInfoLeft = function(iShift){
+		s.curObject(s.current);
+		s.current+=iShift;
+		s.length(s.current); 
 
-				s.display((s.find('.services__block:eq(' + s.current + ')')), 'right');
-			}
-			s.display= function(oBlock, direct){
-				setTimeout(function(){
-					oBlock.stop().animate({[direct]: 2000}, 50, function(){
-						oBlock.addClass('services__block_active').css('opacity', 1);
-					});
-					oBlock.animate({[direct]: 0}, 900);
-				}, 300);
-			}
+		s.display((s.find('.services__block:eq(' + s.current + ')')), '-2000px', '-4000px');
+	}
+	
+	s.display= function(oBlock, oRight, oLeft){
+		s.block.removeClass('services__block_active');
+		
+		s.link.removeClass('breadNav_link_active');
+		s.find('.breadNav_link:eq(' + s.current + ')').addClass('breadNav_link_active');
 
-			s.showInfo = function(event){
-				event.preventDefault();
-				s.link.removeClass('breadNav_link_active');
-				$(this).addClass('breadNav_link_active');
+		setTimeout(function(){
+			oBlock.stop().animate({right: [oRight], left: [oLeft]}, 50, function(){
+				oBlock.addClass('services__block_active').css('opacity', 1);
+			});
+			oBlock.animate({right: 0, left: 0}, 900);
+		}, 300);
+	}
 
+	s.showInfo = function(event){
+		event.preventDefault();
+		s.link.removeClass('breadNav_link_active');
+		$(this).addClass('breadNav_link_active');
+		
 		var info = s.find('[data-link =' + $(this).html() + ']'); // найти блок с data-link по названию ссылки
 		var activeBlock = s.find('.services__block_active');
 		
 		s.curObject(activeBlock.index() - 2);
 		
-		s.display(info, 'left'); // показать блок
+		s.display(info, '0', '2000px'); // показать блок
 	}
 
 	$(document).ready(s.main);
