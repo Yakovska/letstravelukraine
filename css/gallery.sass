@@ -1,0 +1,165 @@
+@import "vars.sass"
+
+.content__gallery
+	@extend .block-padding
+	padding-bottom: 0
+	background: 
+		color: $bg-color
+
+.gallery__heading
+	@extend .block-heading
+	margin-bottom: 30px
+
+.gallery__descr
+	@extend .text-descr
+
+.container__section
+	margin: 20px 0 0
+ 
+.section
+
+.section__info
+
+.section__albums
+
+.albums__album
+	margin: 0 0 50px
+
+.album
+	border: 1px solid$menu-color
+
+
+.album__heading
+	font-size: 1.231rem
+	font-weight: 600
+
+	background: 
+		color: $check-color!important
+		image: none!important
+	color: #fff!important
+	&::first-letter
+		text-transform: uppercase
+
+
+.albums__info
+	position: relative
+	padding: 10px!important
+
+.albums__photo
+	overflow: hidden
+	width: 320px
+	height: 233px
+	margin: 0 auto
+	position: relative
+	&:hover .albums__img
+		transform: scale(1.3)
+	&:hover .albums__hover
+		display: block
+
+
+.albums__img
+	margin: 0 auto
+	transition: all 0.5s ease-in-out
+	width: 100%
+	height: auto
+	position: relative
+	z-index: 5
+
+.albums__hover
+	background: 
+		color: rgba(0,0,0,0.3)
+	width: 100%
+	height: 233px
+	position: absolute
+	top: 0
+	z-index: 100
+	display: none
+	transition: all 1s ease-in-out
+	cursor: pointer
+
+.albums__fa
+	color: #fff
+	font-size: 72px!important
+	line-height: 233px!important
+	
+	transition: all 1s ease-in-out
+	
+
+.album__text
+	text-align: justify
+
+.album__place
+	font-size: 0.923rem
+	font-weight: 600
+	text-align: left
+	&::first-letter
+		text-transform: uppercase
+	
+.album__link
+	text-decoration: none
+	display: inline-block
+	font-weight: 600
+	color: $icon-color
+	position: absolute
+	right: 15px
+	bottom: 15px
+	&:hover
+		color: $icon-color
+
+
+.content__albumOne
+	@extend .block-padding
+
+.albumOne__heading
+	@extend .block-heading
+
+.albumOne__descr
+	@extend .text-descr
+
+.albumOne__photos
+	margin-top: 50px
+
+.albumOne__breadNav
+
+.albumOne_nav
+	background: 
+		color: transparent
+	text-align: left
+	text-transform: uppercase
+	font-weight: 600
+
+.albumOne__item
+
+.albumOne__link
+	color: $icon-color!important
+	&:hover
+		color: $icon-color
+	&:active
+		text-decoration: underline
+.albumOne__link_active
+	text-decoration: underline
+
+
+
+.albumOne__photo
+	
+
+.albumOne__img
+	margin-bottom: 30px
+	height: 120px
+	//width: auto
+
+	cursor: pointer
+	transition: transform 0.5s ease-in-out
+	&:hover
+		transform: scale(1.1)
+		
+
+
+
+
+
+
+
+
+

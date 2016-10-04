@@ -1,0 +1,124 @@
+@import "vars.sass"
+
+html
+	font-size: 10pt
+.content__services
+	@extend .block-padding
+
+.services__heading
+	@extend .block-heading
+
+.services__breadNav
+
+.breadNav_nav
+	background: 
+		color: transparent
+	text-align: left
+	text-transform: uppercase
+	font-weight: 600
+
+.breadNav_item
+
+.breadNav_link
+	color: $icon-color
+	&:hover
+		//text-decoration: none
+		color: $icon-color
+
+.breadNav_link_active
+	text-decoration: underline
+
+.services__info
+	margin: 50px 0 0 0
+	position: relative
+	height: 327px
+
+.services__arrow
+	position: absolute
+	line-height: 50px!important
+	top: 40%
+	color: #0e0e40
+	font-size: 2.154rem!important
+	cursor: pointer
+
+.arrow__left
+	left: -30px	
+
+.arrow__right
+	right: -30px
+
+.services__block
+	padding: 0
+	opacity: 0	
+	position: absolute
+	
+.services__block_active
+	opacity: 1
+	
+.services__icon
+	color: #467AC6
+	text-align: left
+
+.services__fa
+	font-size: 230px!important
+	line-height: 260px!important
+	margin-left: 70px
+
+.services__about
+
+.about__heading
+	@extend .block-heading
+	font-size: 1.846rem
+	margin: 0 0 20px
+	font-weight: 400
+	text-decoration: underline
+
+.services__text
+	@extend .text
+	margin: 0 0 50px
+	padding: 0 15px
+
+.services__link
+	@extend .btn
+	background: 
+		color: $btn-color
+	color: #fff 
+	font-weight: 600
+	text-transform: uppercase
+	transition: transform 0.5s ease-in-out
+	&:hover
+		transform: scale(1.3)
+		color: #fff
+
+.content__booking-request
+	background: 
+		color: $bg-color
+	padding: 50px 0
+	
+.form__heading
+	@extend .block-heading
+
+.form__label
+	@extend .label
+	color: $body-color
+	
+
+.check-bg
+	border: 1px solid $body-color
+
+.bookingForm__btn
+	color: #fff
+	background: 
+		color: $btn-color
+	text-transform: uppercase
+	&:hover
+	background: 
+		color: $btn-color!important
+	color: #fff!important
+
+
+
+
+
+
+

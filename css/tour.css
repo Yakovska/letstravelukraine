@@ -1,0 +1,500 @@
+.block-padding, .content__tourAbout, .content__anotherTours, .content__booking {
+  padding: 50px 0;
+}
+
+.block-heading, .tourAbout__heading, .anotherTours__heading, .booking__heading {
+  color: #333;
+  font-size: 3.231rem;
+  font-weight: 300;
+  font-family: "Raleway", "Helvetica,Arial", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0 0 50px;
+  text-transform: uppercase;
+}
+
+.text, .tourAbout__text {
+  letter-spacing: 0.8px;
+  font-size: 1.385rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.text-descr, .tourHeader__descr {
+  font-size: 1.385rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.label, .bookingForm__label {
+  font-size: 1.077rem;
+  height: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+}
+
+.input, .bookingForm__input {
+  border-radius: 3px;
+  height: 40px;
+}
+
+.textarea, .bookingForm__textarea {
+  width: 100%;
+  resize: none;
+}
+
+.btn, .bookingForm__btn {
+  font-size: 1.231rem;
+  padding: 10px 40px;
+}
+
+body {
+  background-color: #FFF;
+  text-align: center;
+}
+
+.tourHeader, .tourSlider {
+  margin: 70px 0 0;
+  text-align: center;
+}
+
+.tourHeader__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 4rem;
+}
+
+.tourHeader__comm {
+  font-size: 2.3rem;
+  margin: 15px 0 50px;
+  text-decoration: underline;
+}
+.tourHeader__comm::first-letter {
+  text-transform: uppercase;
+}
+
+.tourHeader__duration, .tourHeader__money {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  margin-top: 25px;
+}
+
+.tourHeader__fa {
+  color: #0e0e40;
+  font-size: 2.462rem !important;
+  margin-right: 15px;
+}
+
+.tourHeader__details {
+  font-weight: 400;
+  font-size: 1.385rem;
+}
+
+.tourHeader__link {
+  background-color: #F96525 !important;
+  border: none;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 10px 50px;
+  margin: 80px;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+          transition: transform 0.5s ease-in-out;
+}
+.tourHeader__link:hover {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #fff;
+}
+
+.tourSlider__slider {
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.content__tourAbout {
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: #EAF0F2;
+}
+
+.tourAbout__tourGallery {
+  padding: 50px 0 0;
+  margin: 50px 0 0;
+  height: 500px;
+  background-image: url(../img/tours/gallery_bg.jpg);
+  border-radius: 10px;
+}
+
+.tourGallery__item {
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 50px;
+  padding: 10px 10px 30px;
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+          transition: transform 0.5s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  top: 10px;
+}
+.tourGallery__item:nth-child(even) {
+  -webkit-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+}
+.tourGallery__item:nth-child(3n) {
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: -10px;
+}
+.tourGallery__item:nth-child(5n) {
+  left: -20px;
+}
+.tourGallery__item:nth-child(8n) {
+  right: -20px;
+}
+.tourGallery__item:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+.tourGallery__img {
+  width: 180px;
+  height: 120px;
+}
+
+.tourPreview {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+          transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 200;
+}
+
+.tourPreview__shown {
+  display: block;
+  opacity: 1;
+  -webkit-transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+          transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+  visibility: visible;
+  z-index: 300;
+}
+
+.tourPreview__max {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tourPreview__arrow, .tourPreview__fa {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3.462rem;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 50%;
+}
+
+.tourPreview__arrow_prev {
+  left: 70px;
+}
+
+.preview__arrow_next {
+  right: 70px;
+}
+
+.tourPreview__close {
+  position: relative;
+  z-index: 350;
+  width: 30px;
+  height: 30px;
+  top: 100px;
+  left: 1100px;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.tourPreview__close:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.close__span {
+  position: absolute;
+  z-index: 300;
+  height: 30px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.close__span_1 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close__span_2 {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.tourPreview__fa {
+  top: 70px;
+  font-weight: lighter !important;
+}
+
+.tourPreview__image {
+  height: auto;
+  margin: 45px auto;
+  width: 70%;
+  z-index: 150;
+}
+
+.anotherTours__wrap {
+  position: relative;
+  margin: 50px 0 0;
+}
+
+.anotherTours__frame {
+  height: 200px;
+  overflow: hidden;
+}
+.anotherTours__frame ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+
+.anotherTours__item {
+  border-radius: 5px;
+  float: left;
+  height: 100%;
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 0;
+  width: 275px;
+}
+.anotherTours__item:nth-child(1) {
+  background-image: url(../img/tours/anotherTours/1.png);
+}
+.anotherTours__item:nth-child(2) {
+  background-image: url(../img/tours/anotherTours/2.png);
+}
+.anotherTours__item:nth-child(3) {
+  background-image: url(../img/tours/anotherTours/3.png);
+}
+.anotherTours__item:nth-child(4) {
+  background-image: url(../img/tours/anotherTours/4.png);
+}
+.anotherTours__item:nth-child(5) {
+  background-image: url(../img/tours/anotherTours/5.png);
+}
+.anotherTours__item:nth-child(6) {
+  background-image: url(../img/tours/anotherTours/6.png);
+}
+.anotherTours__item:nth-child(7) {
+  background-image: url(../img/tours/anotherTours/7.png);
+}
+.anotherTours__item:nth-child(8) {
+  background-image: url(../img/tours/anotherTours/8.png);
+}
+.anotherTours__item:nth-child(9) {
+  background-image: url(../img/tours/anotherTours/9.png);
+}
+.anotherTours__item:nth-child(10) {
+  background-image: url(../img/tours/anotherTours/10.png);
+}
+.anotherTours__item:nth-child(11) {
+  background-image: url(../img/tours/anotherTours/11.png);
+}
+.anotherTours__item:nth-child(12) {
+  background-image: url(../img/tours/anotherTours/12.png);
+}
+.anotherTours__item:nth-child(13) {
+  background-image: url(../img/tours/anotherTours/13.png);
+}
+.anotherTours__item:nth-child(14) {
+  background-image: url(../img/tours/anotherTours/14.png);
+}
+.anotherTours__item:nth-child(15) {
+  background-image: url(../img/tours/anotherTours/15.png);
+}
+.anotherTours__item:nth-child(16) {
+  background-image: url(../img/tours/anotherTours/16.png);
+}
+.anotherTours__item:nth-child(17) {
+  background-image: url(../img/tours/anotherTours/17.png);
+}
+
+.anotherTours__descr {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 200px;
+  position: absolute;
+  top: 0;
+  width: 275px;
+  display: table;
+}
+
+.anotherTours__link {
+  display: table-cell;
+  vertical-align: middle;
+}
+.anotherTours__link:hover {
+  text-decoration: none;
+}
+
+.anotherTours__head {
+  border: 5px solid #fff;
+  color: #0e0e40;
+  font-weight: 600;
+  font-size: 1.846rem;
+  margin: 0 auto;
+  padding: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  width: 220px;
+}
+.anotherTours__head:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.bookingForm__parallax {
+  min-height: 320px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bookingForm__message{
+  background-color: #fff;
+  border: 1px solid #0e0e40;
+  border-radius: 10px;
+  color: #0e0e40;
+  display: none;
+  font-size: 1.385rem;
+  height: 100px;
+  line-height: 1.5;
+  position: fixed;
+  text-align: center;
+  width: 400px;
+  z-index: 250;
+}
+
+.bookingForm__message_active{
+  display: table;
+}
+
+.bookMessage__text{
+  display: table-cell;
+  vertical-align: middle;
+}
+.booking__heading {
+  color: #fff;
+}
+
+.bookingform {
+  margin: 50px 0 0;
+}
+
+.bookingForm__row {
+  margin: 30px 0 0;
+}
+
+.bookingForm__label {
+  color: #fff;
+}
+
+.bookingForm__input {
+  background-color: #fff;
+}
+
+.bookingForm__visit {
+  margin-top: 35px;
+}
+
+.bookingForm__checkbox {
+  position: relative;
+}
+
+.label__checkbox {
+  padding-left: 40px !important;
+}
+
+.input__checkbox {
+  cursor: pointer;
+  height: 22px;
+  margin: 0 0 0 -40px !important;
+  opacity: 0;
+  width: 22px;
+  z-index: 3;
+}
+.input__checkbox:checked + .check-bg {
+  border-color: #66AFE9;
+  font-size: 16px !important;
+  background-color: #467AC6;
+  color: #fff;
+}
+
+.check-bg {
+  background-color: #fff;
+  border-radius: 3px;
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  font-size: 0 !important;
+  line-height: 22px !important;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bfh-datepicker,
+.bfh-countries,
+.bookingForm__select {
+  cursor: pointer;
+}
+
+.bfh-datepicker {
+  background-color: #fff;
+}
+
+.bookingForm__btn {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.bookingForm__btn:hover {
+  background-color: #fff;
+}

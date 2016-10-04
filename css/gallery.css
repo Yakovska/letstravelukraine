@@ -1,0 +1,233 @@
+/* line 10, vars.sass */
+.block-padding, .content__gallery, .content__albumOne {
+  padding: 50px 0;
+}
+
+/* line 13, vars.sass */
+.block-heading, .gallery__heading, .albumOne__heading {
+  color: #333;
+  font-size: 3.231rem;
+  font-weight: 300;
+  font-family: "Raleway", "Helvetica,Arial", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0 0 50px;
+  text-transform: uppercase;
+}
+
+/* line 22, vars.sass */
+.text {
+  letter-spacing: 0.8px;
+  font-size: 1.385rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+/* line 28, vars.sass */
+.text-descr, .gallery__descr, .albumOne__descr {
+  font-size: 1.385rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* line 33, vars.sass */
+.label {
+  font-size: 1.077rem;
+  height: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+}
+
+/* line 41, vars.sass */
+.input {
+  border-radius: 3px;
+  height: 40px;
+}
+
+/* line 45, vars.sass */
+.textarea {
+  width: 100%;
+  resize: none;
+}
+
+/* line 49, vars.sass */
+.btn {
+  font-size: 1.231rem;
+  padding: 10px 40px;
+}
+
+/* line 3, gallery.sass */
+.content__gallery {
+  padding-bottom: 0;
+  background-color: #EAF0F2;
+}
+
+/* line 9, gallery.sass */
+.gallery__heading {
+  margin-bottom: 30px;
+}
+
+/* line 16, gallery.sass */
+.container__section {
+  margin: 20px 0 0;
+}
+
+/* line 25, gallery.sass */
+.albums__album {
+  margin: 0 0 50px;
+}
+
+/* line 28, gallery.sass */
+.album {
+  border: 1px solid #0e0e40;
+}
+
+/* line 32, gallery.sass */
+.album__heading {
+  font-size: 1.231rem;
+  font-weight: 600;
+  background-color: #467AC6 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+/* line 40, gallery.sass */
+.album__heading::first-letter {
+  text-transform: uppercase;
+}
+
+/* line 44, gallery.sass */
+.albums__info {
+  position: relative;
+  padding: 10px !important;
+}
+
+/* line 48, gallery.sass */
+.albums__photo {
+  overflow: hidden;
+  width: 320px;
+  height: 233px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 54, gallery.sass */
+.albums__photo:hover .albums__img {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
+/* line 56, gallery.sass */
+.albums__photo:hover .albums__hover {
+  display: block;
+}
+
+/* line 60, gallery.sass */
+.albums__img {
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 5;
+}
+
+/* line 68, gallery.sass */
+.albums__hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 233px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: none;
+  -webkit-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+/* line 80, gallery.sass */
+.albums__fa {
+  color: #fff;
+  font-size: 72px !important;
+  line-height: 233px !important;
+  -webkit-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+/* line 88, gallery.sass */
+.album__text {
+  text-align: justify;
+}
+
+/* line 91, gallery.sass */
+.album__place {
+  font-size: 0.923rem;
+  font-weight: 600;
+  text-align: left;
+}
+/* line 95, gallery.sass */
+.album__place::first-letter {
+  text-transform: uppercase;
+}
+
+/* line 98, gallery.sass */
+.album__link {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  color: #0e0e40;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+/* line 106, gallery.sass */
+.album__link:hover {
+  color: #0e0e40;
+}
+
+/* line 119, gallery.sass */
+.albumOne__photos {
+  margin-top: 50px;
+}
+
+/* line 124, gallery.sass */
+.albumOne_nav {
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* line 133, gallery.sass */
+.albumOne__link {
+  color: #0e0e40 !important;
+}
+/* line 135, gallery.sass */
+.albumOne__link:hover {
+  color: #0e0e40;
+}
+/* line 137, gallery.sass */
+.albumOne__link:active {
+  text-decoration: underline;
+}
+
+/* line 139, gallery.sass */
+.albumOne__link_active {
+  text-decoration: underline;
+}
+
+/* line 147, gallery.sass */
+.albumOne__img {
+  margin-bottom: 30px;
+  height: 120px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+          transition: transform 0.5s ease-in-out;
+}
+/* line 154, gallery.sass */
+.albumOne__img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}

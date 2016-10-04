@@ -1,0 +1,126 @@
+@import "vars.sass"
+
+.content__contact
+	@extend .block-padding
+
+.contact__heading
+	@extend .block-heading
+
+.contact__descr
+	@extend .text-descr
+
+.contact__panel
+	background: 
+		color: $bg-color
+	border-radius: 10px
+	padding: 50px 0
+	margin: 50px 0 0
+
+.panel__item
+	display: inline-block
+	background: 
+		color: #fff
+	padding: 30px 0
+	margin: 0 1%
+	width: 17%
+	border-radius: 10px
+	position: relative
+	&:hover .panel__img
+		text-decoration: none
+		animation:
+			name: swing
+			fill-mode: both
+			duration: 1s
+	&:nth-child(1)
+		top: -20px
+	&:nth-child(2n)
+		top: 20px
+	&:nth-child(3n)
+		top: -20px
+	&:nth-child(5n)
+		top: -20px
+
+.panel__img
+	margin: 0 0 30px
+	transform-origin: top center
+	transition: transform 0.5s ease-in-out
+	width: 80px
+	
+.panel__mail
+	margin: 15px 0 40px
+	transform-origin: top center
+	
+.panel__link
+	text-decoration: none
+	font-size: 1.231rem
+	color: #333
+	margin: 0
+	&:hover
+		text-decoration: none
+		color: $icon-color
+		
+.panel__link_mail
+	font-size: 1.077rem
+
+@keyframes swing
+	20%  
+		transform: rotate(15deg) 
+	40%  
+		transform: rotate(-10deg) 
+	60%  
+		transform: rotate(5deg) 
+	80%  
+		transform: rotate(-5deg) 
+	100%  
+		transform: rotate(0deg)
+
+.contact__message
+	margin: 50px 0 0
+	background: 
+		color: $bg-color
+	padding: 50px
+
+.message__heading
+	padding: 0  0 30px
+	font-size: 1.538rem
+	text-align: left
+	font-weight: 500
+	margin: 0
+
+.messageForm
+
+.messageForm__form
+
+.messageForm__row
+
+.messageForm__group
+	margin: 20px 0 0		
+
+
+.messageForm__label
+	@extend .label
+
+.messageForm__input
+	@extend .input
+	margin-bottom: 15px
+
+.messageForme__textarea
+	@extend .textarea
+
+.messageForm__btn
+	@extend .btn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+.block-padding, .content__about {
+  padding: 50px 0;
+}
+
+.block-heading, .aboutMe__heading {
+  color: #333;
+  font-size: 3.231rem;
+  font-weight: 300;
+  font-family: "Raleway", "Helvetica,Arial", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0 0 50px;
+  text-transform: uppercase;
+}
+
+.text {
+  letter-spacing: 0.8px;
+  font-size: 1.385rem;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.text-descr, .aboutMe__descr {
+  font-size: 1.385rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.label {
+  font-size: 1.077rem;
+  height: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: left;
+}
+
+.input {
+  border-radius: 3px;
+  height: 40px;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+}
+
+.btn {
+  font-size: 1.231rem;
+  padding: 10px 40px;
+}
+
+html {
+  font-size: 10pt;
+}
+
+.aboutMe {
+  margin: 0;
+}
+
+.aboutMe__img {
+  background-image: url(../img/aboutMe.jpg);
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.aboutMe__descr {
+  text-align: justify;
+}

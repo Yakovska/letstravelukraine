@@ -1,0 +1,387 @@
+@import "vars.sass"
+
+body
+	background-color: #FFF
+	text-align: center
+
+.tourHeader
+	margin: 70px 0 0
+	text-align: center
+
+.tourHeader__heading
+	text-transform: uppercase
+	font-weight: 600
+	font-style: italic
+	font-size: 4rem
+
+.tourHeader__comm
+	font-size: 2.3rem
+	margin: 15px 0 50px
+	text-decoration: underline
+	&::first-letter
+		text-transform: uppercase
+
+.tourHeader__descr
+	@extend .text-descr
+	
+.tourHeader__duration
+	height: 40px
+	line-height: 40px
+	vertical-align: middle
+	margin-top: 25px
+
+.tourHeader__money
+	@extend .tourHeader__duration
+
+.tourHeader__fa
+	color: $icon-color
+	font-size: 2.462rem!important
+	margin-right: 15px
+
+.tourHeader__details
+	font-weight: 400
+	font-size: 1.385rem
+
+.flag
+	//width: 16px
+	//height: 11px
+	//display: block
+
+.tourHeader__link
+	background-color: #F96525!important
+	border: none
+	color: #fff!important
+	font-weight: 600
+	padding: 10px 50px
+	margin: 80px
+	text-transform: uppercase
+	transition: transform 0.5s ease-in-out
+	&:hover
+		transform: scale(1.3)
+		color: #fff
+
+.tourSlider
+	@extend .tourHeader
+
+.tourSlider__slider	
+	width: 400px
+	margin: 0 auto
+	box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	padding: 10px
+	border-radius: 5px
+	background-color: #fff
+
+.tourSlider__img
+
+.content__tourAbout
+	text-align: center
+	padding-right: 50px
+	padding-left: 50px
+	@extend .block-padding
+	background: 
+		color: $bg-color
+
+
+.tourAbout__descr
+
+
+.tourAbout__heading
+	@extend .block-heading
+
+.tourAbout__text
+	@extend .text 
+
+.tourAbout__tourGallery
+	padding: 50px 0 0 
+	margin: 50px 0 0
+	height: 500px
+	background: 
+		image: url(../img/tours/gallery_bg.jpg)
+	border-radius: 10px
+
+.tourGallery
+
+.tourGallery__item
+	background:
+		color: #fff
+	display: inline-block
+	position: relative
+	margin: 0 20px 50px
+	padding: 10px 10px 30px
+	transform: rotate(-2deg)
+	transition: transform 0.5s ease-in-out
+	box-shadow: 0 3px 6px rgba(0,0,0,.25)
+	&:nth-child(even) 
+		transform: rotate(2deg)
+	&:nth-child(3n)
+		transform: rotate(-5deg)
+		top: -10px
+	&:nth-child(5n)
+		left: -20px
+	&:nth-child(6n)
+	top: 10px
+	&:nth-child(8n)
+		right: -20px
+	&:hover
+		transform: scale(1.2)
+		cursor: pointer
+
+.tourGallery__img
+	width: 180px
+	height: 120px
+
+.tourPreview
+	background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0
+	display: none
+	height: 100%
+	left: 0
+	opacity: 0
+	position: fixed
+	top: 0
+	transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s
+	visibility: hidden
+	width: 100%
+	z-index: 200
+
+.tourPreview__shown 
+	display: block
+	opacity: 1
+	transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s
+	visibility: visible
+	z-index: 300
+
+.tourPreview__max
+	position: relative
+	width: 100%
+	height: 100%
+
+.tourPreview__arrow
+	color: #fff
+	cursor: pointer
+	font-size: 3.462rem
+	position: absolute
+	width: 100px
+	height: 50px
+	top: 50%
+	
+.tourPreview__arrow_prev
+	left: 70px
+
+.preview__arrow_next
+	right: 70px
+	
+
+.tourPrev__fa
+
+.tourPreview__close	
+	position: relative
+	z-index: 350
+	width: 30px
+	height: 30px
+	top: 100px
+	left: 1100px
+	transition: all 0.5s ease-in-out
+	&:hover
+		cursor: pointer
+		transform: scale(1.4)
+
+.close__span
+	position: absolute
+	z-index: 300
+	height: 30px
+	width: 3px
+	background: 
+		color: #fff
+
+.close__span_1
+	transform: rotate(45deg)
+
+.close__span_2
+	transform: rotate(-45deg)
+
+.tourPreview__fa
+	@extend .tourPreview__arrow
+	top: 70px
+	font-weight: lighter!important
+
+
+.tourPreview__image
+	height: auto
+	margin: 45px auto
+	width: 70%
+	z-index: 150
+
+.content__anotherTours
+	@extend .block-padding
+	
+.anotherTours
+
+.anotherTours__heading
+	@extend .block-heading
+
+.anotherTours__wrap
+	position: relative
+	margin: 50px 0 0
+
+.anotherTours__frame
+	height: 200px
+	overflow: hidden
+	ul
+		margin: 0
+		padding: 0
+		height: 100%
+		list-style: none
+
+.anotherTours__item
+	border-radius: 5px
+	float: left
+	height: 100%
+	list-style-type: none
+	margin: 0 5px
+	padding: 0
+	width: 275px
+	@for $i from 1 through 12
+		&:nth-child(#{$i})
+			background-image: url(../img/tours/anotherTours/#{$i}.png)
+
+.anotherTours__descr
+	background-color: rgba(255, 255, 255, 0.4)
+	height: 200px
+	position: absolute
+	top: 0
+	width: 275px
+	display: table
+	
+.anotherTours__link	
+	display: table-cell
+	vertical-align: middle
+	&:hover
+		text-decoration: none
+
+.anotherTours__head
+	border: 5px solid #fff
+	color: $icon-color
+	font-weight: 600
+	font-size: 1.846rem
+	margin: 0 auto
+	padding: 10px
+	transition: all 0.5s ease-in-out
+	width: 220px
+	&:hover
+		transform: scale(1.1)
+
+.content__booking
+	@extend .block-padding
+
+.bookingForm__parallax
+	min-height: 320px
+	background: transparent
+	width: 100%
+	height: 100%
+	position: relative
+
+.booking__heading
+	@extend .block-heading
+	color: #fff
+	
+.bookingform
+	margin: 50px 0 0
+
+.bookingForm__form
+
+.bookingForm__row
+	margin: 30px 0 0
+
+.bookingForm__group
+
+.bookingForm__label
+	@extend .label
+	color: #fff
+
+.bookingForm__input
+	background: 
+		color: #fff
+	@extend .input
+	
+.bookingForm__visit
+	margin-top: 35px
+
+.bookingForm__checkbox
+	position: relative
+
+.label__checkbox
+	padding-left: 40px!important
+	
+.input__checkbox
+	cursor: pointer
+	height: 22px
+	margin: 0 0 0 -40px!important
+	opacity: 0
+	width: 22px
+	z-index: 3
+	&:checked + .check-bg
+		border-color: #66AFE9 
+		font-size: 16px!important
+		background: 
+			color: $check-color
+		color: #fff
+
+.check-bg
+	background: 
+		color: #fff
+	border-radius: 3px
+	display: block
+	left: 0
+	position: absolute
+	width: 22px
+	height: 22px
+	font-size: 0!important
+	line-height: 22px!important	
+	margin: 0 auto
+	text-align: center
+	
+.bfh-datepicker,
+.bfh-countries,
+.bookingForm__select
+	cursor: pointer
+
+.bfh-datepicker
+	//border: 1px solid #000
+	background: 
+		color: #fff
+
+.bookingForm__textarea
+	@extend .textarea
+
+.bookingForm__btn
+	@extend .btn
+	border: 2px solid #fff
+	background: 
+		color: transparent
+	color: #fff
+	transition: all 0.5s ease-in-out
+	&:hover
+		background: 
+			color: #fff
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
